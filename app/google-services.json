@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "929351821105",
+    "firebase_url": "https://find-my-coffee-yo.firebaseio.com",
+    "project_id": "find-my-coffee-yo",
+    "storage_bucket": "find-my-coffee-yo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:929351821105:android:9f6691fd9faba47f903210",
+        "android_client_info": {
+          "package_name": "ugm.fznzz.findmycoffee"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "929351821105-gg64eiusqa2ohhgcivnecm9f0jc4pele.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtm0TR2t8-tymGih5P6amSqsHOax732IA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "929351821105-gg64eiusqa2ohhgcivnecm9f0jc4pele.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
