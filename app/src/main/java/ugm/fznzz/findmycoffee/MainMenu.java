@@ -42,17 +42,22 @@ public class MainMenu extends AppCompatActivity implements NavigationView.OnNavi
         switch (menuItem.getItemId()) {
             case R.id.nav_home: {
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
+                menuItem.setChecked(true);
                 break;
             }
             case R.id.nav_sort: {
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new SortFragment()).commit();
+                menuItem.setChecked(true);
                 break;
             }
             case R.id.nav_settings: {
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new SettingsFragment()).commit();
+                menuItem.setChecked(true);
                 break;
             }
             case R.id.nav_login: {
+                Intent login = new Intent(MainMenu.this, Login.class);
+                startActivity(login);
                 break;
             }
             case R.id.nav_signup:
@@ -60,7 +65,6 @@ public class MainMenu extends AppCompatActivity implements NavigationView.OnNavi
                 startActivity(sign_up);
                 break;
         }
-        menuItem.setChecked(true);
         drawer.closeDrawer(GravityCompat.START);
         return false;
     }

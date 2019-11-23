@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        Button btnSignIn = findViewById(R.id.btnSignIn);
+        Button btnSignIn = findViewById(R.id.btnEnter);
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
 //        Button btnSignUp = (Button)findViewById(R.id.btnSignUp);
 //
-        TextView txtTitle = findViewById(R.id.textLogin);
+        TextView txtTitle = findViewById(R.id.textTitle);
         Typeface face = Typeface.createFromAsset(getAssets(),"Fonts/font1.otf");
         txtTitle.setTypeface(face);
 //

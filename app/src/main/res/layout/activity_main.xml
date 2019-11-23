@@ -25,29 +25,10 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textLogin">
-
-            <EditText
-                android:id="@+id/formUsername"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:layout_marginEnd="32dp"
-                android:backgroundTint="@color/white"
-                android:ems="10"
-                android:hint="Phone Number"
-                android:importantForAutofill="no"
-                android:inputType="textPhonetic"
-                android:textColor="@color/white"
-                android:textColorHint="@color/slight_white"
-                android:visibility="invisible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@id/textTitle">
 
             <Button
-                android:id="@+id/btnSignIn"
+                android:id="@+id/btnEnter"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="32dp"
@@ -61,27 +42,10 @@
                 app:layout_constraintStart_toStartOf="parent" />
 
 
-            <EditText
-                android:id="@+id/formPass"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="32dp"
-                android:layout_marginEnd="32dp"
-                android:backgroundTint="@color/white"
-                android:ems="10"
-                android:hint="Password"
-                android:importantForAutofill="no"
-                android:inputType="textPassword"
-                android:textColor="@color/white"
-                android:textColorHint="@color/slight_white"
-                android:visibility="invisible"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/formUsername" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <TextView
-            android:id="@+id/textLogin"
+            android:id="@+id/textTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="72dp"
@@ -91,21 +55,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/btnSignUp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="32dp"
-            android:layout_marginBottom="24dp"
-            android:background="@drawable/button2"
-            android:text="@string/sign_up"
-            android:textColor="@color/white"
-            android:visibility="invisible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
