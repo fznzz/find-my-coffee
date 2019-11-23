@@ -16,10 +16,10 @@
         <menu>
             <item
                 android:id="@+id/nav_editStore"
-                android:title="Login" />
+                android:title="Edit Store" />
             <item
                 android:id="@+id/nav_logout"
-                android:title="Sign Up" />
+                android:title="Sign Out" />
         </menu>
     </item>
 </menu>
