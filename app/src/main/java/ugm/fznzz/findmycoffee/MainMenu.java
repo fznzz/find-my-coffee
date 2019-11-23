@@ -7,6 +7,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.ui.NavigationUI;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -38,25 +39,24 @@ public class MainMenu extends AppCompatActivity implements NavigationView.OnNavi
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-        switch (menuItem.getItemId())
-        {
-            case R.id.nav_home:
-            {
+        switch (menuItem.getItemId()) {
+            case R.id.nav_home: {
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).commit();
                 break;
             }
-            case R.id.nav_sort:
-            {
+            case R.id.nav_sort: {
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new SortFragment()).commit();
                 break;
             }
-            case R.id.nav_settings:
-            {
+            case R.id.nav_settings: {
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new SettingsFragment()).commit();
                 break;
             }
-            case R.id.nav_login:
-
+            case R.id.nav_login: {
                 break;
+            }
             case R.id.nav_signup:
-                Intent sign_up = new Intent(MainMenu.this,SignUp.class);
+                Intent sign_up = new Intent(MainMenu.this, SignUp.class);
                 startActivity(sign_up);
                 break;
         }
@@ -67,12 +67,9 @@ public class MainMenu extends AppCompatActivity implements NavigationView.OnNavi
 
     @Override
     public void onBackPressed() {
-        if(drawer.isDrawerOpen(GravityCompat.START))
-        {
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
-        }
-        else
-        {
+        } else {
             super.onBackPressed();
         }
 
