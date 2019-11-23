@@ -39,6 +39,10 @@ public class SignUp extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+
+
+
+
                 final ProgressDialog mDialog = new ProgressDialog(SignUp.this);
                 mDialog.setMessage("Loading . . .");
                 mDialog.show();
@@ -54,10 +58,11 @@ public class SignUp extends AppCompatActivity {
                         else
                         {
                             mDialog.dismiss();
-                            User user = new User(edtName.getText().toString(),edtPass.getText().toString());
-                            table_user.child(edtPhone.getText().toString()).setValue(user);
-                            Toast.makeText(SignUp.this, "Sign Up successfully", Toast.LENGTH_SHORT).show();
-                            finish();
+                            //go to activity sign up store, send string to next activity, then if success, register User and Shop at the same time.
+//                            User user = new User(edtName.getText().toString(),edtPass.getText().toString());
+//                            table_user.child(edtPhone.getText().toString()).setValue(user);
+//                            Toast.makeText(SignUp.this, "Sign Up successfully", Toast.LENGTH_SHORT).show();
+
                         }
                     }
 
