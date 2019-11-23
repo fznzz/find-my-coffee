@@ -61,6 +61,7 @@ public class Login extends AppCompatActivity {
                                     User user = dataSnapshot.child(edtPhone.getText().toString()).getValue(User.class);
                                     if (user.getPass().equals(edtPass.getText().toString())) {
                                         Toast.makeText(Login.this, "Logged in", Toast.LENGTH_SHORT).show();
+
                                     } else {
                                         Toast.makeText(Login.this, "Username/Password is incorrect", Toast.LENGTH_SHORT).show();
                                     }
