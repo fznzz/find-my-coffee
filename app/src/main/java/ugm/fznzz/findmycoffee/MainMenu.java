@@ -19,6 +19,10 @@ public class MainMenu extends AppCompatActivity implements NavigationView.OnNavi
 
     private DrawerLayout drawer;
     private NavigationView navigationView;
+    String loginState;
+    String phoneNumber;
+    String nameOwner;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
