@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -20,6 +21,7 @@ public class SignUp extends AppCompatActivity {
 
     EditText edtPhone, edtName, edtPass;
     Button btnUp;
+    String phoneS, nameS, passS;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,45 +41,48 @@ public class SignUp extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                if(edtName.getText().toString().isEmpty()||edtPass.getText().toString().isEmpty()||edtPhone.getText().toString().isEmpty())
+                {
+                    Toast.makeText(SignUp.this, "Please fill the form correctly", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    final ProgressDialog mDialog = new ProgressDialog(SignUp.this);
+                    mDialog.setMessage("Loading . . .");
+                    mDialog.show();
 
+                    table_user.addValueEventListener(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                            if (dataSnapshot.child(edtPhone.getText().toString()).exists()) {
+                                mDialog.dismiss();
+                                Toast.makeText(SignUp.this, "Phone Number already exist", Toast.LENGTH_SHORT).show();
+                            } else {
+                                mDialog.dismiss();
+                                Intent sign_up = new Intent(SignUp.this, SignUpStore.class);
+                                sign_up.putExtra("phoneS", edtPhone.getText().toString());
+                                sign_up.putExtra("nameS", edtPass.getText().toString());
+                                sign_up.putExtra("passS", edtPass.getText().toString());
+                                startActivity(sign_up);
+                                finish();
 
-
-
-                final ProgressDialog mDialog = new ProgressDialog(SignUp.this);
-                mDialog.setMessage("Loading . . .");
-                mDialog.show();
-
-                table_user.addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        if(dataSnapshot.child(edtPhone.getText().toString()).exists())
-                        {
-                            mDialog.dismiss();
-                            Toast.makeText(SignUp.this, "Phone Number already exist", Toast.LENGTH_SHORT).show();
-                        }
-                        else
-                        {
-                            mDialog.dismiss();
-                            //go to activity sign up store, send string to next activity, then if success, register User and Shop at the same time.
+                                //go to activity sign up store, send string to next activity, then if success, register User and Shop at the same time.
 //                            User user = new User(edtName.getText().toString(),edtPass.getText().toString());
 //                            table_user.child(edtPhone.getText().toString()).setValue(user);
 //                            Toast.makeText(SignUp.this, "Sign Up successfully", Toast.LENGTH_SHORT).show();
 
+                            }
                         }
-                    }
 
-                    @Override
-                    public void onCancelled(@NonNull DatabaseError databaseError) {
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError databaseError) {
 
-                    }
-                });
+                        }
+                    });
+                }
 
 
             }
         });
-
-
-
 
 
     }
