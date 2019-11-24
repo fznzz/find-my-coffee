@@ -7,6 +7,7 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.ui.NavigationUI;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -22,6 +23,9 @@ public class MainMenu extends AppCompatActivity implements NavigationView.OnNavi
     String loginState;
     String phoneNumber;
     String nameOwner;
+    private RecyclerView recyclerView;
+    private RecyclerView.Adapter adapter;
+    private RecyclerView.LayoutManager layoutManager;
 
 
     @Override
@@ -43,6 +47,8 @@ public class MainMenu extends AppCompatActivity implements NavigationView.OnNavi
             MenuItem item =  navigationView.getMenu().getItem(0);
             onNavigationItemSelected(item);
         }
+
+
     }
 
 
