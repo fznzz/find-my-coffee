@@ -71,6 +71,9 @@ public class MainMenu extends AppCompatActivity implements NavigationView.OnNavi
             }
             case R.id.nav_signup:
                 Intent sign_up = new Intent(MainMenu.this, SignUp.class);
+                sign_up.putExtra("stateLogin", loginState);
+                sign_up.putExtra("name", nameOwner);
+                sign_up.putExtra("phoneNum", phoneNumber);
                 startActivity(sign_up);
                 break;
         }
