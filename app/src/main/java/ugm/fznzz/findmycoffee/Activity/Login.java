@@ -33,8 +33,8 @@ public class Login extends AppCompatActivity {
         Typeface face = Typeface.createFromAsset(getAssets(), "Fonts/font1.otf");
         txtLogin.setTypeface(face);
 
-        final EditText edtPhone = (EditText) findViewById(R.id.formUsername);
-        final EditText edtPass = (EditText) findViewById(R.id.formPass);
+        final EditText edtPhone = findViewById(R.id.formUsername);
+        final EditText edtPass = findViewById(R.id.formPass);
 
 
 
