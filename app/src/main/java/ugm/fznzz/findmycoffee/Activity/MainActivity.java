@@ -1,6 +1,7 @@
-package ugm.fznzz.findmycoffee;
+package ugm.fznzz.findmycoffee.Activity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import ugm.fznzz.findmycoffee.R;
 
 import android.content.Intent;
 import android.graphics.Typeface;

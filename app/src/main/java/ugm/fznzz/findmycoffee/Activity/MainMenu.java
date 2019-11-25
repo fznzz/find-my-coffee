@@ -1,4 +1,4 @@
-package ugm.fznzz.findmycoffee;
+package ugm.fznzz.findmycoffee.Activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -6,10 +6,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.navigation.ui.NavigationUI;
-import androidx.recyclerview.widget.RecyclerView;
+import ugm.fznzz.findmycoffee.Fragment.HomeFragment;
+import ugm.fznzz.findmycoffee.R;
+import ugm.fznzz.findmycoffee.Fragment.SettingsFragment;
+import ugm.fznzz.findmycoffee.Fragment.SortFragment;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;

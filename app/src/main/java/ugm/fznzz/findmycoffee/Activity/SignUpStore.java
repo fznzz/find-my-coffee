@@ -1,11 +1,12 @@
-package ugm.fznzz.findmycoffee;
+package ugm.fznzz.findmycoffee.Activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import ugm.fznzz.findmycoffee.R;
+import ugm.fznzz.findmycoffee.DataClass.Shop;
+import ugm.fznzz.findmycoffee.DataClass.User;
 
 import android.os.Bundle;
-import android.provider.ContactsContract;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;

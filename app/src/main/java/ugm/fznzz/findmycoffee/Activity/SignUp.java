@@ -1,7 +1,8 @@
-package ugm.fznzz.findmycoffee;
+package ugm.fznzz.findmycoffee.Activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import ugm.fznzz.findmycoffee.R;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
