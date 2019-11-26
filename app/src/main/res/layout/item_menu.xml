@@ -3,15 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/contact_item_id"
     android:layout_height="wrap_content">
 
     <TextView
-        android:id="@+id/itemName"
+        android:id="@+id/tv1storename"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:textColor="@android:color/primary_text_light"
+        android:textColor="@color/white"
         android:textSize="14sp"
         android:textStyle="normal"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,15 +20,16 @@
         tools:text="Store Name" />
 
     <TextView
-        android:id="@+id/itemPrice"
+        android:id="@+id/tv1address"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="16dp"
         android:textSize="12sp"
+        android:textColor="@color/slight_white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/itemName"
-        app:layout_constraintTop_toBottomOf="@+id/itemName"
+        app:layout_constraintStart_toStartOf="@+id/tv1storename"
+        app:layout_constraintTop_toBottomOf="@+id/tv1storename"
         tools:text="Address" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

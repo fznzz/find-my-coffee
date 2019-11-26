@@ -1,4 +1,4 @@
-package ugm.fznzz.findmycoffee;
+package ugm.fznzz.findmycoffee.DataClass;
 
 public class User {
     private String Name;
