@@ -35,5 +35,4 @@
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/main_nav"
         app:menu="@menu/drawer_view" />
-
 </androidx.drawerlayout.widget.DrawerLayout>

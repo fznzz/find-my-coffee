@@ -10,15 +10,17 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
+
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello world"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+        android:text="Anonymous User"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Testing"/>
+        android:text="Unregistered" />
 
 
 

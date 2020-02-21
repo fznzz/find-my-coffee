@@ -4,6 +4,7 @@ import android.app.Dialog;
 import android.content.ClipData;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -58,28 +59,37 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_menu, parent, false);
         final MyViewHolder vholder = new MyViewHolder(v);
 
-//        mDialog = new Dialog(mContext);
-//        mDialog.setContentView(R.layout.details_demo);
-//        TextView tvName = mDialog.findViewById(R.id.tv2cshopname);
-//        TextView tvAddress = mDialog.findViewById(R.id.tv2address);
-//        TextView tvOpenHours = mDialog.findViewById(R.id.tv2openhours);
-//        TextView tvPriceRange = mDialog.findViewById(R.id.tv2pricerange);
-//        Button btopenlink = mDialog.findViewById(R.id.buttonLink);
+        mDialog = new Dialog(mContext);
+        mDialog.setContentView(R.layout.details_demo);
+
 //        tvName.setText(shopList.get(vholder.getAdapterPosition()).getShopName());
 //        tvAddress.setText(shopList.get(vholder.getAdapterPosition()).getAddress());
 //        tvOpenHours.setText(shopList.get(vholder.getAdapterPosition()).getOpenHours());
 //        tvPriceRange.setText(shopList.get(vholder.getAdapterPosition()).getPriceRange());
-//        btopenlink.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                goToUrl(shopList.get(vholder.getAdapterPosition()).getLink());
-//            }
-//        });
+
 
         vholder.item_contact.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(mContext, "Testclick " + vholder.getAdapterPosition(), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(mContext, "Testclick " + vholder.getAdapterPosition(), Toast.LENGTH_SHORT).show();
+                TextView tvName = mDialog.findViewById(R.id.tv2cshopname);
+                TextView tvAddress = mDialog.findViewById(R.id.tv2address);
+                TextView tvOpenHours = mDialog.findViewById(R.id.tv2openhours);
+                TextView tvPriceRange = mDialog.findViewById(R.id.tv2pricerange);
+//                Button btopenlink = mDialog.findViewById(R.id.buttonLink);
+                tvName.setText("Bumi Gayo Cofee");
+                Typeface face = Typeface.createFromAsset(mContext.getAssets(), "Fonts/font1.otf");
+                tvName.setTypeface(face);
+                tvAddress.setText("Jl. Pandega Marta II, Manggung, Caturtunggal, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281");
+                tvOpenHours.setText("Senin - Sabtu : 09.00-01.00 Minggu 09.30-01.00");
+                tvPriceRange.setText("Rp 10.000 - Rp 25.000");
+//                btopenlink.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View v) {
+//                        goToUrl("https://g.page/bumi-gayo-coffee?share");
+//                    }
+//                });
+                mDialog.show();
             }
         });
 
